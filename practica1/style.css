@@ -1,0 +1,40 @@
+.fondo{
+    background-color: salmon;
+}
+
+.boton {
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 5px;
+    border: 1px solid #000000;
+    color: #ffffff;
+    background: #c3c3c3;
+    }
+    
+.boton:hover {
+    border: 0px;
+    opacity: 0.7;
+    border-radius: 35%;
+    }
+
+.boton.color1 {
+    background: orange;
+    }
+
+.boton.color2 {
+    background: greenyellow;
+    }
+
+.boton.color3 {
+    background: lightseagreen;
+    }
+
+.boton.mediano {
+    font-size: 18px;
+    }
+
+.boton.redondo {
+    border-radius: 50%;
+    }
+            
