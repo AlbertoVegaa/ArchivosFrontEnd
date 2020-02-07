@@ -1,5 +1,5 @@
-.fondo{
-    background-color: salmon;
+body {
+    background-color: #2F363D;
 }
 
 .boton {
@@ -37,4 +37,3 @@
 .boton.redondo {
     border-radius: 50%;
     }
-            
