@@ -1,7 +1,6 @@
 body {
     background-color: #2F363D;
     color: white
-    
 }
 
 .menu {
@@ -10,12 +9,10 @@ body {
     padding: 5px;
     max-width: auto;
     margin: auto;
-    
 }
 
 .menu li{
     display: table;
-    text-align: end;
     padding: 10px;
 }
 
