@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #1D2125;
+  font-family: Arial;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="img/sonrisa.jpg" style="width:100%">
+    <img src="img/flores.jpg" style="width:100%">
+    <img src="img/auto5.jpg" style="width:100%">
+    <img src="img/ciudad.jpg" style="width:100%">
+    <img src="img/auto3.jpg" style="width:100%">
+    <img src="img/ciudad4.jpg" style="width:100%">
+    <img src="img/space.jpg" style="width:100%">
+    <img src="img/scary.jpg" style="width:100%">
+  </div>
+  
+  <div class="column">
+    <img src="img/dodge.jpg" style="width:100%">
+    <img src="img/spaceinvaders.jpg" style="width:100%">
+    <img src="img/color.jpg" style="width:100%">
+    <img src="img/solar.jpg" style="width:100%">
+    <img src="img/fractal.jpg" style="width:100%">
+    <img src="img/splash.jpg" style="width:100%">
+    <img src="img/paisaje.jpg" style="width:100%">
+  </div> 
+   
+  <div class="column">
+    <img src="img/mar.jpg" style="width:100%">
+    <img src="img/xp.jpg" style="width:100%">
+    <img src="img/nature.jpg" style="width:100%">
+    <img src="img/keyboard.jpg" style="width:100%">
+    <img src="img/ciudad2.jpg" style="width:100%">
+    <img src="img/mujer2.jpg" style="width:100%">
+    <img src="img/universo.jpg" style="width:100%">
+  </div>
+  
+  <div class="column">
+    <img src="img/auto4.jpg" style="width:100%">
+    <img src="img/auto.jpg" style="width:100%">
+    <img src="img/mojave.jpg" style="width:100%">
+    <img src="img/model.jpg" style="width:100%">
+    <img src="img/auto2.jpg" style="width:100%">
+    <img src="img/ciudad3.jpg" style="width:100%">
+    <img src="img/gimnasio.jpg" style="width:100%">
+    <img src="img/snowmountain.jpg" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>
