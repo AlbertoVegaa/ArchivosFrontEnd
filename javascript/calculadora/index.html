@@ -32,34 +32,35 @@
                             <input type="text" class="form-control" id="resultado" style="margin: auto;">
                         </div>
                     </div>
-                    <div class="form-row" style="width: fit-content;">
-                        <div class="col-4 mb-3">
+                    <div class="form-row" style="width: auto;">
+                        <div class="col-3 mb-3">
                             <button class="btn btn-outline-primary btn-lg btn-block" id="btn-7">7</button>
                             <button class="btn btn-outline-primary btn-lg btn-block" id="btn-4">4</button>
                             <button class="btn btn-outline-primary btn-lg btn-block" id="btn-1">1</button>
-                            <button class="btn btn-outline-primary btn-lg btn-block" id="btn-0">0</button>
                             <button class="btn btn-danger          btn-lg btn-block" id="btn-c">C</button>
                         </div>
-                        <div class="col-4 mb-3">
+                        <div class="col-3 mb-3">
                             <button class="btn btn-outline-primary btn-lg btn-block" id="btn-8">8</button>
                             <button class="btn btn-outline-primary btn-lg btn-block" id="btn-5">5</button>
                             <button class="btn btn-outline-primary btn-lg btn-block" id="btn-2">2</button>
-                            <button class="btn btn-outline-primary btn-lg btn-block" id="btn-rest">-</button>
-                            <button class="btn btn-outline-primary btn-lg btn-block" id="btn-div">/</button>
+                            <button class="btn btn-outline-primary btn-lg btn-block" id="btn-0">0</button>
                         </div>
-                        <div class="col-4 mb-3">
+                        <div class="col-3 mb-3">
                             <button class="btn btn-outline-primary btn-lg btn-block" id="btn-9">9</button>
                             <button class="btn btn-outline-primary btn-lg btn-block" id="btn-6">6</button>
                             <button class="btn btn-outline-primary btn-lg btn-block" id="btn-3">3</button>
-                            <button class="btn btn-outline-primary btn-lg btn-block" id="btn-suma">+</button>
-                            <button class="btn btn-outline-primary btn-lg btn-block" id="btn-mult">x</button>
+                            <button class="btn btn-primary btn-lg btn-block" id="btn-punto">.</button>
+                        </div>
+                        <div class="col-3 mb-3">
+                            <button class="btn btn-secondary btn-lg btn-block" id="btn-div">/</button>  
+                            <button class="btn btn-secondary btn-lg btn-block" id="btn-mult">x</button>
+                            <button class="btn btn-secondary btn-lg btn-block" id="btn-rest">-</button>
+                            <button class="btn btn-secondary btn-lg btn-block" id="btn-suma">+</button>
                         </div>
                         <div class="col mb-3">
-                            <button class="btn btn-outline-warning btn-lg btn-block" id="btn-enter">=</button>
+                            <button class="btn btn-warning btn-lg btn-block" id="btn-enter">=</button>
                         </div>
-
-                    </div>
-                    
+                    </div>                    
                 </form>
             </div>
         </div>
@@ -68,5 +69,127 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+        jQuery(document).ready(function() {
+            var numero = 0; var operacion = 0;
+
+            $("#btn-c").click(function(event) {
+                event.preventDefault()
+                $("#resultado").val("");
+            });
+            $("#btn-punto").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"."); 
+            });
+            $("#btn-0").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"0"); 
+            });
+            $("#btn-1").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"1"); 
+            });
+            $("#btn-2").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"2"); 
+            });
+            $("#btn-3").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"3"); 
+            });
+            $("#btn-4").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"4"); 
+            });
+            $("#btn-5").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"5"); 
+            });
+            $("#btn-6").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"6"); 
+            });
+            $("#btn-7").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"7"); 
+            });
+            $("#btn-8").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"8"); 
+            });
+            $("#btn-9").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                $("#resultado").val(valor+"9"); 
+            });
+
+            $("#btn-suma").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                numero=parseFloat(valor);
+                operacion=1;
+                $("#resultado").val(""); 
+            });
+            $("#btn-rest").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                numero=parseFloat(valor);
+                operacion=2;
+                $("#resultado").val(""); 
+            });
+            $("#btn-mult").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                numero=parseFloat(valor);
+                operacion=3;
+                $("#resultado").val(""); 
+            });
+            $("#btn-div").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                numero=parseFloat(valor);
+                operacion=4;
+                $("#resultado").val(""); 
+            });
+            $("#btn-enter").click(function(event) {
+                event.preventDefault()
+                let valor = $("#resultado").val();
+                let res=0;
+
+                switch(operacion){
+                    case 1:
+                    res = numero + parseFloat(valor);
+                    $("#resultado").val(res);
+                    break;
+
+                    case 2:
+                    res = numero - parseFloat(valor);
+                    $("#resultado").val(res);
+                    break;
+                    
+                    case 3:
+                    res = numero * parseFloat(valor);
+                    $("#resultado").val(res);
+                    break;
+
+                    case 4:
+                    res = numero / parseFloat(valor);
+                    $("#resultado").val(res);
+                    break;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
