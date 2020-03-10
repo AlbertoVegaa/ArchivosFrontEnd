@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body style="background-color: #2F363D; color: white;">
+    <div style="background-color: #1d2125; padding: 30px;">
+        <h2 id="nombre"></h2>
+    
+        <button id="boton1">Nombre 1</button>
+        <button id="boton2">Nombre 2</button>
+        <button id="boton3">Nombre 3</button>
+        <button id="boton4">Limpiar</button>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script>
+        jQuery(document).ready(function() {
+            var text = '{ "employees" : [' +
+            '{ "nombre":"Benito" ,  "apellido":"Camelo" },' +
+            '{ "nombre":"Alma" ,    "apellido":"Marcela" },' +
+            '{ "nombre":"Queco" ,   "apellido":"Jones" } ]}';
+            var object=JSON.parse(text);
+
+            $("#boton1").click(function(){
+                $("#nombre").html(object.employees[0].nombre +" "+ object.employees[0].apellido);
+            })
+            $("#boton2").click(function(){
+                $("#nombre").html(object.employees[1].nombre +" "+ object.employees[1].apellido);
+            })
+            $("#boton3").click(function(){
+                $("#nombre").html(object.employees[2].nombre +" "+ object.employees[2].apellido);
+            })
+            $("#boton4").click(function(){
+                $("#nombre").html("");
+            })
+        });
+    </script>
+</body>
+</html>
