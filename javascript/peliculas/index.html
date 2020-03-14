@@ -20,6 +20,9 @@
                         <button id="btn_buscar" class="btn btn-danger">Buscar</button>
                     </div>
                 </div>
+                <div class="row">
+                    <div id="resultado"></div>  
+                </div>
             </div>
     </div>
 
@@ -38,6 +41,32 @@
             },
             function(data, status) {
               console.log(data);
+
+              var titulo    = "";
+              var year      = "";
+              var imdb      = "";
+              var poster    = "";
+              var resultado = "";
+
+              for(var num=0;num<data.Search.length;num++){
+
+              titulo  = data.Search [num].Title;
+              year    = data.Search [num].Year;
+              imdb    = data.Search [num].imdbID;
+              poster  = data.Search [num].Poster;
+
+              resultado = 
+              '<div class="card" style="width: 18rem;color: white; background-color: #1d2125;margin: 15px;"><img src="'+
+              poster+
+              '" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">'+
+              titulo+
+              '</h5><p class="card-text">Año: '+
+              year+
+              '</p><p class="card-text">imdb: '+
+              imdb+
+              '</p><a href="#" class="btn btn-info">Download</a></div></div>';
+              $("#resultado").append(resultado)}
+            
             }
           );
         });
