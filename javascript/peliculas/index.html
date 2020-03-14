@@ -33,7 +33,7 @@
         jQuery(document).ready(function() {
         var api_key = "ff89f153";
         $("#btn_buscar").click(function() {
-          $.get("http://www.omdbapi.com",
+          $.get("https://www.omdbapi.com",
             {
               apikey: api_key,
               r: "json",
@@ -64,7 +64,7 @@
               year+
               '</p><p class="card-text">imdb: '+
               imdb+
-              '</p><a href="#" class="btn btn-info">Download</a></div></div>';
+              '</p><a style="margin=14px;" href="#" class="btn btn-info">Download</a> <a style="margin=14px;" href="#" class="btn btn-danger">Ver Online</a></div></div>';
               $("#resultado").append(resultado)}
             
             }
