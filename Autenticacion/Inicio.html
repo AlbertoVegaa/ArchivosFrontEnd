@@ -35,6 +35,9 @@
             if(emailVerified==false) {
                 document.getElementById("verificado").innerHTML="Tu email no ha sido verificado, revisa tu bandeja de entrada.";
             }
+            else{
+                document.getElementById("verificado").innerHTML="";
+            }
             
         } else {
             // User is signed out.
@@ -44,11 +47,9 @@
         function cerrarsesion(){
             firebase.auth().signOut()
             .then(function(){
-                console.log("Salir");
                 window.location.href = "index.html";
             })
             .catch(function(error){
-                console.log(error);
             })
         }
     </script>
