@@ -14,9 +14,8 @@ function comparacionpass(){
         registrar();
     }
     else{
-        alert("Contrasenas diferentes");
+        $("#DiferentesPass").modal();
     }
-    
 }
 
 function registrar(){
@@ -25,12 +24,12 @@ function registrar(){
     firebase.auth().createUserWithEmailAndPassword(email, contrasena)
     .then(function(result){
         CorreoValidacion();
-        window.location.href = "index.html";
+        $("#CuentaCreada").modal();
     })
     .catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
-        alert(errorMessage)
+        alert(errorMessage);
     });
 }
 
@@ -39,4 +38,8 @@ function CorreoValidacion(){
     user.sendEmailVerification().then(function() {
     }).catch(function(error) {
     });
+}
+
+function volverainicio(){
+    window.location.href = "index.html";
 }

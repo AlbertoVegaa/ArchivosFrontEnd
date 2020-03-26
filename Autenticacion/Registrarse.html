@@ -52,6 +52,40 @@
         </form>
         </article>
     </div>
+
+    <div class="modal fade" id="CuentaCreada">
+		<div class="modal-dialog">
+		  	<div class="modal-content">
+				<div class="modal-header">
+				  	<h4 class="modal-title">Cuenta creada con exito</h4>
+				  	<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+			  		No olvides validar tu correo, revisa tu bandeja de entrada y sigue los pasos. De lo contrario, tu cuenta y datos seran eliminados permanentemente. Cuentas con 5 dias para validar tu correo.
+				</div>
+				<div class="modal-footer">
+			  		<button type="button" onclick="volverainicio()" class="btn btn-danger" data-dismiss="modal">Volver a Inicio</button>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+    <div class="modal fade" id="DiferentesPass">
+		<div class="modal-dialog">
+		  	<div class="modal-content">
+				<div class="modal-header">
+				  	<h4 class="modal-title">Error</h4>
+				  	<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+                    La contraseña que ingresaste no coincide, verificalo por favor.
+				</div>
+				<div class="modal-footer">
+			  		<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
     
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
