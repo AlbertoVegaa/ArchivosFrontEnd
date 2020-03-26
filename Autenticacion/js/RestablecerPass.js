@@ -21,6 +21,6 @@ function enviarRestablecimiento(){
     });
 }
 
-function volverinicio(){
-    window.location = "index.html"
+function volverainicio(){
+    window.location.href = "Inicio.html";
 }
