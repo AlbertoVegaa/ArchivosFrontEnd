@@ -10,7 +10,8 @@ function enviarRestablecimiento(){
     event.preventDefault();
     var auth = firebase.auth();
     var emailAddress     =   event.target.email.value;
-
+    
+    firebase.auth().useDeviceLanguage();
     auth.sendPasswordResetEmail(emailAddress)
     .then(function() {
         $("#sendemail").modal();
