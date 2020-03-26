@@ -22,5 +22,5 @@ function enviarRestablecimiento(){
 }
 
 function volverainicio(){
-    window.location.href = "Inicio.html";
+    window.location.href = "index.html";
 }
