@@ -3,7 +3,19 @@ var formRegister;
 
 function inicializar(){
     formRegister = document.getElementById("form-registro");
-    formRegister.addEventListener("submit", registrar, false);
+    formRegister.addEventListener("submit", comparacionpass, false);
+}
+
+function comparacionpass(){
+    var pass1 = document.getElementById("password").value;
+    var pass2 = document.getElementById("rtpassword").value;
+    if(pass1 == pass2){
+        registrar();
+    }
+    else{
+        alert("Contrasenas diferentes "+pass1+" "+pass2);
+    }
+    
 }
 
 function registrar(){
