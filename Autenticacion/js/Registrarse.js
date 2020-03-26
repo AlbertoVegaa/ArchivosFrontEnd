@@ -7,19 +7,19 @@ function inicializar(){
 }
 
 function comparacionpass(){
+    event.preventDefault();
     var pass1 = document.getElementById("password").value;
     var pass2 = document.getElementById("rtpassword").value;
     if(pass1 == pass2){
         registrar();
     }
     else{
-        alert("Contrasenas diferentes "+pass1+" "+pass2);
+        alert("Contrasenas diferentes");
     }
     
 }
 
 function registrar(){
-    event.preventDefault();
     var email = event.target.email.value;
     var contrasena = event.target.password.value;
     firebase.auth().createUserWithEmailAndPassword(email, contrasena)
