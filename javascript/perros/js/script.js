@@ -1,7 +1,8 @@
 jQuery(document).ready(function() {
 
     $("#buscar").click(function(event) {
-        $("#resultado").empty();  
+        $("#resultado").empty();
+        $("#urldescarga").empty();
     });
     
     $("#buscar").click(function() {
@@ -11,17 +12,19 @@ jQuery(document).ready(function() {
                 console.log("la url es: "+data.message);
 
                 var resultado = "";
+                var linkD = "";
 
                 resultado = 
-                '<img src="'+data.message+'" class="card-img-top" style="height: auto;" alt="...">';
+                '<img src="'+data.message+'" class="card-img-top" style="height: auto; width: auto;" alt="...">';
                 $("#resultado").append(resultado);
+
+                linkD =
+                '<a href="'+data.message+'">Descargala aqui</a>'
+                $("#urldescarga").append(linkD);
                 
-                document.getElementById("urldescarga").innerHTML=data.message;
+                //document.getElementById("urldescarga").innerHTML=data.message;
+                
             }
         );
     });
 });
-
-function descargar(){
-    window.location.href = document.getElementById("urldescarga").value;
-}
