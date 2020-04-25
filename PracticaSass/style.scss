@@ -1,0 +1,49 @@
+$Color1     : #263238;
+$BodyColor  : #2F363D;
+$Color4     : #1D2125;
+$ColorText  : #ffffff;
+
+$fuente1    : 'Girassol', cursive;
+$fuente2    : 'Roboto Condensed', sans-serif;
+
+body {
+    background-color: $BodyColor;
+}
+header{
+    background: $Color4;
+    display: flex;
+    height: 10vh;
+    justify-content: flex-end;
+    color: $ColorText;
+    padding: 5px;
+    max-width: auto;
+    margin: auto;
+    button{
+        border-style: hidden;
+        color: $ColorText;
+        background: $Color4;
+        &:hover{
+            background: $BodyColor;
+        }
+    }
+}
+.container{
+    background: $ColorText;
+    height: 450px;
+    color: $Color1;
+    h1{
+        font-family: $fuente1;
+        font-size: xx-large;
+        padding: 5%;
+    }
+    
+    h2{
+        font-family: $fuente2;
+        font-size: larger;
+    }
+
+    p{
+        font-family: $fuente2;
+        font-size: medium;
+    }
+}
