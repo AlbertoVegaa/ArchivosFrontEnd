@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/946411146a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4" style="color: #0060A6;"><img width=400px src="https://www.coppel.com/wcsstore/AuroraStorefrontAssetStore/emarketing/homepage/septiembre2018/coppel.png">.com</h1>
+          <p class="lead" style="color: #0060A6;">Coppel Mejora tu vida.</p>
+        </div>
+      </div>
+    <div class="container">
+        <div id="app">
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;"></th>
+                        <th>Descripcion</th>
+                        <th style="width: 200px;">Monto</th>
+                        <th style="width: 100px;">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="text" placeholder="Busca tu producto" class="form-control" v-model="nuevoReg.name">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" v-model="nuevoReg.amount">
+                        </td>
+                        <td>
+                            <button @click="add()" type="button" class="btn btn-primary btn-block"><i class="fas fa-cart-plus"></i></button>
+                        </td>
+                    </tr>
+                    <tr v-if="items.length === 0"><td colspan="4" class="text-center">No se han encontrado pagos pendientes.</td>
+                    <tr v-for="item, index in items">
+                        <td><button @click="remove(index)"
+                            class="btn btn-default btn-xs">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button></td>
+                        <td>{{ item.name }}</td>
+                        <td>$ {{ item.amount.toFixed(2) }}</td>
+                        <td :title="item.paid ? 'Si':'No'">
+                            <button @click="pagao(item)" type="button" class="btn btn-sm" v-bind:class="{ 'btn-success': item.paid,'btn-danger': !item.paid }">
+                                <span v-if="item.paid" class="glyphicon glyphicon-ok"></span>
+                                <span v-if="!item.paid" class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td class="text-right">Por pagar</td>
+                        <td>$ {{totalAmount(0)}}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="text-right">Pagado</td>
+                        <td>$ {{totalAmount(1)}}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="text-right">Total</td>
+                        <td>$ {{totalAmount(2)}}</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                nuevoReg:{
+                    name:'', amount:0,
+                },
+                items:[
+                    {name: "PolyStation 4", amount: 4900, paid:false},
+                    {name: "Zapatos", amount: 384, paid:true},
+                    {name: "Ropa", amount: 500, paid:false},
+                    {name: "Celular", amount: 1600, paid:true},
+                ]
+            },
+            methods:{
+                remove: function(index){
+                    //alert(index);
+                    this.items.splice(index,1);
+                },
+                add(){
+                    this.items.push({
+                        name : this.nuevoReg.name,
+                        amount : parseFloat(this.nuevoReg.amount),
+                        paid:false
+                    });
+                    this.nuevoReg.name = '',
+                    this.nuevoReg.amount = 0
+                },
+                pagao(item){
+                    item.paid = !(item.paid);
+                },
+                totalAmount(t){
+                    var total = this.items.reduce(function(a, b){
+                        switch(t){
+                            case 0: return a + (!b.paid ? b.amount:0);
+                            case 1: return a + (b.paid ? b.amount:0);
+                            case 2: return a + b.amount;
+                        }
+                    }, 0);
+                    return total.toFixed(2);
+                }
+            },
+        });
+    </script>
+</body>
+</html>
