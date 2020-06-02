@@ -1,0 +1,160 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu {
+    list-style: none;
+  }
+  
+  .menu li {
+    display: inline-block;
+    padding: 5px 10px;
+  }
+  
+  .menu li a {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  
+  .fondo-principal {
+    background-image: url("../img/fondo1.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1440px;
+  }
+  
+  .texto-header {
+    padding-top: 400px;
+  }
+  
+  .texto-header p {
+    font-weight: 800;
+  }
+  
+  .boton-negro {
+    background: black;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .boton-negro:hover {
+    color: white;
+  }
+  
+  h2 {
+    font-weight: 800;
+  }
+  
+  h1 {
+    font-weight: 800;
+  }
+  
+  .h-gris {
+    color: #a2a2a2;
+  }
+  
+  .h-footer {
+    font-weight: 800;
+    color: white;
+    background: black;
+    padding: 5px;
+    display: inline-block;
+  }
+  
+  .fondo-bosque {
+    background-image: url("../img/fondo2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    padding-top: 160px;
+    color: white;
+  }
+  
+  .icono-social {
+    background: black;
+    color: white;
+    border-radius: 100%;
+    padding: 10px;
+  }
+  
+  .icono-social:hover {
+    color: white;
+  }
+  
+  .fondo-gris {
+    background: #f3f3f3;
+  }
+  
+  .nav-link {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  
+  .nav-link:hover {
+    color: black;
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+  }
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+  }
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .bg-light {
+      background: none !important;
+    }
+  }
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+  }
+  
+  @media (min-width: 1600px) {
+  }
+  
+  @media (max-width: 1400px) {
+  }
+  
+  /* Large devices (desktops, less than 1200px) */
+  @media (max-width: 1199.98px) {
+  }
+  /* Medium devices (tablets, less than 992px) */
+  @media (max-width: 991.98px) {
+  }
+  /* Small devices (landscape phones, less than 768px) */
+  @media (max-width: 767.98px) {
+  }
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) {
+    .fondo-principal {
+      background-image: url("../img/fondo1-1.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 537px;
+    }
+  
+    .texto-header {
+      padding-top: 50px;
+    }
+  
+    .fondo-bosque {
+      background-image: url("../img/fondo2-1.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 800px;
+      padding-top: 160px;
+    }
+  
+    .fondo-bosque h1 {
+      font-size: 24px;
+    }
+  }
