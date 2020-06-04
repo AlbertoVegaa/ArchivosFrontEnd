@@ -1,0 +1,301 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-weight: 700;
+}
+
+.header{
+    background-image: url("img/seccion1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1443px;
+}
+
+#navbarNav ul li a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.fondo-menu{
+    background: rgba(225,127,127,0.6);
+}
+
+.h-blanco{
+    text-transform: uppercase;
+    color: white;
+}
+
+.h-blanco2{
+    color: white;
+}
+
+.h-rosa{
+    text-transform: uppercase;
+    color: #ff7f7f;
+}
+
+.txt-rosa{
+    color: #ff7f7f;
+    font-weight: 500;
+}
+
+.p-blanco{
+    color: white;
+}
+
+.btn-blanco{
+    padding: 10px 40px;
+    background: white;
+    color: #ff7f7f;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-blanco:hover{
+    text-decoration: none;
+    color: #ff7f7f;
+}
+
+.btn-rosa{
+    padding: 10px 40px;
+    background:#ff7f7f;
+    color:white;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-rosa:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.espacio-seccion1{
+    margin-top: 70px;
+}
+
+.seccion2{
+    background: #ff7f7f;
+    color: white;
+}
+
+.img-sushi2{
+    margin-top: -55px;
+}
+
+.img-sushi3{
+    margin-top: 55px;
+}
+
+.img-sushi4{
+    margin-top: -55px;
+}
+
+.seccion3{
+    padding-top: 110px;
+}
+
+.seccion4{
+    background: #ff7f7f;
+    color: white;
+    padding: 50px;
+    padding-bottom: 50px;
+}
+
+.seccion3-txt{
+    margin: 140px;
+}
+
+.circulo{
+    border: 5px solid white;
+    border-radius: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+
+}
+
+.circulo h1{
+    text-transform: uppercase;
+}
+
+.seccion5{
+    background-image: url("img/seccion3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding-top: 300px;
+}
+
+.seccion6{
+    background-image: url("img/seccion6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.col1-seccion6{
+    padding-top: 130px;
+}
+
+.col2-seccion6{
+    padding-top: 200px;
+}
+
+.col3-seccion6{
+    padding-top: 65px;
+}
+
+.f-txt{
+    background: #f4f4f4;
+    padding: 10px 40px;
+    border-radius: 15px;
+    border: none;
+    width: 450px;
+}
+
+.f-btn{
+    background: #ff7f7f;
+    padding: 10px 40px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    font-weight: 800;
+    margin-left: -5px;   
+}
+
+.col4-seccion6{
+    padding-top: 100px;
+}
+
+.seccion7{
+    background: #111111;
+    color: white;
+}
+
+.seccion7 h2{
+    color: white;
+}
+
+.menu-footer{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-footer li a{
+    color: white;
+}
+
+.menu-footer li a:hover{
+    color: white;
+}
+
+.img-sushi-footer{
+    margin-top: -150px;
+    padding-right: 70px;
+}
+
+.icono-social {
+    background:white;
+    color:black;
+    border-radius: 100%;
+    padding: 20px 20px;
+  }
+  
+  .icono-social:hover {
+    color:black;
+  }
+
+@media (min-width: 576px){
+
+}
+
+@media (min-width: 768px){
+    .header{
+        height: 800px;
+    }
+}
+
+@media (min-width: 992px){
+    .header{
+        height: 800px;
+    }
+}
+
+@media (min-width: 1024px){
+    .header{
+        height: 1000px;
+    }
+}
+
+@media (min-width: 1200px){
+    .header{
+        height: 1000px;
+    }
+}
+
+@media (min-width: 1400px){
+    .header{
+        height: 1300px;
+    }
+}
+
+@media (min-width: 1700px){
+    .header{
+        height: 1600px;
+    }
+}
+
+@media (min-width: 1600px){
+    
+}
+
+@media (max-width: 1400px){
+    
+    
+}
+
+@media (max-width: 1199.98px){
+    
+}
+
+@media (max-width: 991.98px){
+    
+}
+
+@media (max-width: 767.98px){
+    .header{
+        height: 600px;
+    }
+}
+
+@media (max-width: 575.98px){
+    .header{
+        height: 600px;
+    }
+
+    .img-sushi1{
+        display: none;
+    }
+    
+    .img-sushi2{
+        /*margin-top: 0;*/
+        display: none;
+    }
+
+    .img-sushi3{
+        display: none;
+    }
+
+    .img-sushi4{
+        display: none;
+    }
+}
