@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Vue calculator </title>
+</head>
+<body>
+<div id="app">
+    <input type="number" v-model="num1">
+    <select v-model="operation">
+        <option value="0">+</option>
+        <option value="1">-</option>
+        <option value="2">*</option>
+        <option value="3">/</option>
+    </select>
+    <input type="number" v-model="num2">
+    <button @click="calculate">=</button>
+    <strong>{{results}}</strong>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            operation: '0',
+            results: '0',
+            num1:0,
+            num2:0,
+        },
+        methods:{
+            calculate:function(){
+                switch (this.operation) {
+                    case '0' :
+                        this.results = parseInt(this.num1) + parseInt(this.num2);
+                        break;
+                    case '1' :
+                        this.results = this.num1-this.num2;
+                        break;
+                    case '2' :
+                        this.results = this.num1*this.num2;
+                        break;
+                    case '3' :
+                        this.results = this.num1/this.num2;
+                        break;
+                }
+            }
+        }
+    })
+ 
+</script>
+ 
+</body>
+</html>
